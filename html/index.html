@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="libs/rain.js" defer></script>
+	    <!-- Bootstrap CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+<body>
+<!-- NAVBAR START -->
+<div class="header position-relative">
+	<nav class="navbar navbar-expand-lg bg-none navbar-dark position-fixed w-100 text-danger">
+		<div class="container-fluid">
+			<a class="navbar-brand text-success m-lg-5 fst-manrope" href="#">MelodyMeadow</a>
+			<audio id="background-music" loop>
+				<source src="../audio/audio.mp3" type="audio/mpeg">
+				Ваш браузер не поддерживает аудио элемент.
+			</audio>
+			<button class="button-transparent" onclick="playMusic()">🔉</button>
+			<button class="button-transparent" onclick="stopMusic()">🔇</button>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav m-auto" id="nav-item">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Home</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							Category
+						</a>
+						<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+							<a class="dropdown-item" href="http://127.0.0.1:5505/ready-html/index.html">Гитара</a>
+							<a class="dropdown-item" href="#">Скрипка</a>
+							<a class="dropdown-item" href="#">Фортепиано</a>
+						    <a class="dropdown-item" href="#">Барабаны</a>
+							<a class="dropdown-item" href="#">Виолончель</a>
+							<a class="dropdown-item" href="#">Категория 3</a>
+							<a class="dropdown-item" href="#">Категория 1</a>
+							<a class="dropdown-item" href="#">Категория 2</a>
+							<a class="dropdown-item" href="#">Категория 3</a>
+						</div>
+						<ul class="dropdown-menu scrollable-menu" role="menu"></ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#" id="registerUser-modal"
+							data-bs-toggle="modal" data-bs-target="#register-modal">Register</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#" id="loginUser-modal"
+							data-bs-toggle="modal" data-bs-target="#login-modal">Login</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#" id="registerAdmin-modal"
+							data-bs-toggle="modal" data-bs-target="#register-admin-modal">Add Admin</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#" id="logoutUser-btn">Logout</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" id="showUsername">No user</a>
+					</li>
+				</ul>
+				<div class="nav-item">
+					<img src="./img/cart.png" class="nav-link active" aria-current="page" href="#"
+						id="cartModal-btn" data-bs-toggle="modal" data-bs-target="#cartModal">
+				</div>
+				<form class="d-flex" role="search">
+					<input class="form-control me-2 bg-transparent text-bg-dark w-50" type="search"
+						aria-label="Search" id="search-inp">
+					<button class="btn btn-outline-success" type="button" id="search-btn">Search</button>
+				</form>
+			</div>
+		</div>
+	</nav>
+  <!-- NAVBAR END -->
+
+	<section class="layers">
+		<div class="layers__container">
+			<div class="layers__item layer-1" style="background-image: url(img/layer-1.jpg);"></div>
+			<div class="layers__item layer-2" style="background-image: url(img/layer-2.png);"></div>
+			<div class="layers__item layer-3">
+				<div class="hero-content">
+					<h1>Website<span>MelodyMeadow</span></h1>
+					<div class="hero-content__p">Make beautiful music with our instruments </div>
+				</div>
+			</div>
+			<div class="layers__item layer-4">
+				<canvas class="rain"></canvas>
+			</div>
+			<div class="layers__item layer-5" style="background-image: url(img/layer-5.png);"></div>
+			<div class="layers__item layer-6" style="background-image: url(img/layer-6.png);"></div>
+		</div>
+	</section>
+   
+	<article class="main-article" style="background-image: url(https://cdna.artstation.com/p/assets/covers/images/021/317/486/large/wonkwan-jeon-sun-comp-0001.jpg?1571212505);">
+		<div class="main-article__content">
+			<h2 class="main-article__header">Музыка</h2>
+			<p class="main-article__paragraph">Музыка — это не просто последовательность звуков, это язык души, способный уносить нас в мир мечтаний, воспоминаний и эмоций. Каждая нота — это история, каждый аккорд — отголосок человеческого опыта. На этой волне чувств музыкальные инструменты становятся ключом к волшебству.</p>
+		</div>
+		
+ <!-- CARDS START -->
+
+ <div class="card" style="width: 18rem;">
+	<img src="..." class="card-img-top" alt="...">
+	<div class="card-body">
+	  <h5 class="card-title">Card title</h5>
+	  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+	  <a href="#" class="btn btn-primary">Go somewhere</a>
+	</div>
+  </div>
+
+
+
+
+<!-- CARDS END -->
+
+
+
+<!-- SECTION INSTRUMENTS START -->
+<section
+class="container mt-5 mx-auto d-flex flex-wrap align-content-center"
+id="sectionInstruments"
+></section>
+<!-- SECTION INSTRUMENTS END -->
+		<!-- JS BOOTSTRAP -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+
+		<script src="./js/main.js"></script>
+</body>
+</html>
