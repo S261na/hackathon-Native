@@ -1,167 +1,186 @@
- @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 :root {
-	--index: calc(1vw + 1vh);
-	--transition: 1.5s cubic-bezier(.05, .5, 0, 1);
+  --index: calc(1vw + 1vh);
+  --transition: 1.5s cubic-bezier(0.05, 0.5, 0, 1);
 }
 @font-face {
-	font-family: kamerik-3d;
-	src: url(../fonts/kamerik205-heavy.woff2);
-	font-weight: 900;
+  font-family: kamerik-3d;
+  src: url(../fonts/kamerik205-heavy.woff2);
+  font-weight: 900;
 }
 @font-face {
-	font-family: merriweather-italic-3d;
-	src: url(../fonts/merriweather-regular-italic.woff2);
+  font-family: merriweather-italic-3d;
+  src: url(../fonts/merriweather-regular-italic.woff2);
 }
 
 body {
-	background-color: #000;
-	color: #fff;
-	font-family: kamerik-3d;
+  background-color: #000;
+  color: #fff;
+  font-family: kamerik-3d;
 }
 .navbar {
-    z-index: 2;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    height: 10%;
+  z-index: 2;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 10%;
 }
 
 .hero-image {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 .button-transparent {
-	margin-left: 2%;
-    background-color: transparent;
-    border: none; 
+  background-color: transparent;
+  border: none;
+  margin-right: 4%;
 }
-
-#nav-item {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
+.nav-item {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
 }
 
 .nav-item {
-    margin: 10px;
-    cursor: pointer;
-    position: relative;
+  margin: 10px;
+  cursor: pointer;
+  position: relative;
 }
 
 .nav-item::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: rgb(0, 255, 72);
-    transition: width 0.3s ease-in-out;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(0, 255, 72);
+  transition: width 0.3s ease-in-out;
 }
 
 .nav-item:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
 /* ------------------------------------------------------------ */
 .layers {
-	perspective: 1000px;
-	overflow: hidden;
+  perspective: 1000px;
+  overflow: hidden;
 }
 .layers__container {
-	height: 100vh;
-	min-height: 500px;
-	transform-style: preserve-3d;
-	transform: rotateX(var(--move-y)) rotateY(var(--move-x));
-	will-change: transform;
-	transition: transform var(--transition);
+  height: 100vh;
+  min-height: 500px;
+  transform-style: preserve-3d;
+  transform: rotateX(var(--move-y)) rotateY(var(--move-x));
+  will-change: transform;
+  transition: transform var(--transition);
 }
 .layers__item {
-	position: absolute;
-	inset: -5vw;
-	background-size: cover;
-	background-position: center;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  position: absolute;
+  inset: -5vw;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .layer-1 {
-	transform: translateZ(-55px) scale(1.06);
+  transform: translateZ(-55px) scale(1.06);
 }
 .layer-2 {
-	transform: translateZ(80px) scale(.88);
+  transform: translateZ(80px) scale(0.88);
 }
 .layer-3 {
-	transform: translateZ(180px) scale(.8);
+  transform: translateZ(180px) scale(0.8);
 }
 .layer-4 {
-	transform: translateZ(190px) scale(.9);
+  transform: translateZ(190px) scale(0.9);
 }
 .layer-5 {
-	transform: translateZ(300px) scale(.9);
+  transform: translateZ(300px) scale(0.9);
 }
 .layer-6 {
-	transform: translateZ(380px);
+  transform: translateZ(380px);
 }
 .hero-content {
-	font-size: calc(var(--index) * 2.9);
-	text-align: center;
-	text-transform: uppercase;
-	letter-spacing: calc(var(--index) * -.15);
-	line-height: 1.35em;
-	margin-top: calc(var(--index) * 5.5);
-	color: #fff;
+  font-size: calc(var(--index) * 2.9);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: calc(var(--index) * -0.15);
+  line-height: 1.35em;
+  margin-top: calc(var(--index) * 5.5);
+  color: #fff;
 }
 .hero-content h1 {
-	font-size: 130%;
-	font-weight: 900;
-	font-family: 'kamerik-3d';
+  font-size: 130%;
+  font-weight: 900;
+  font-family: "kamerik-3d";
 }
 .hero-content span {
-	display: block;
+  display: block;
 }
 .hero-content__p {
-	text-transform: none;
-	font-family: merriweather-italic-3d;
-	letter-spacing: normal;
-	font-size: calc(var(--index) * .73);
-	line-height: 3;
+  text-transform: none;
+  font-family: merriweather-italic-3d;
+  letter-spacing: normal;
+  font-size: calc(var(--index) * 0.73);
+  line-height: 3;
 }
-.layer-4, .layer-5, .layer-6 {
-	pointer-events: none;
+.layer-4,
+.layer-5,
+.layer-6 {
+  pointer-events: none;
 }
 /* -------------------------------------------------- */
 .main-article {
-	min-height: 100vh;
-	background-size: cover;
-	background-position: center;
-	color: #fff;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-	text-align: center;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
 }
 .main-article__header {
-	text-transform: uppercase;
-	font-size: 250%;
-	
-	/* font-family: 'Roboto Mono'; */
+  text-transform: uppercase;
+  font-size: 250%;
+
+  /* font-family: 'Roboto Mono'; */
 }
 .main-article__paragraph {
-	max-width: calc(var(--index) * 30);
-	/* font-size: calc(var(--index) * .9); */
-	margin-top: calc(var(--index) / 1.25);
-	font-family: 'Roboto Mono';
-	font-size: 110%;
-	text-align: center;
+  max-width: calc(var(--index) * 30);
+  /* font-size: calc(var(--index) * .9); */
+  margin-top: calc(var(--index) / 1.25);
+  font-family: "Roboto Mono";
+  font-size: 110%;
+  text-align: center;
 }
 
 /* ----------------------------- */
+.cards-container {
+  background-image: url("https://proprikol.ru/wp-content/uploads/2019/12/les-krasivye-kartinki-na-rabochij-stol-10.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+h1 {
+    margin-top: 7%;
+    text-align: center;
+    font-family: 'Manrope';
+	color: #fff;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: space-around;
+
+}
+

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../instruments css/all.css">
+    <!-- link bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <!-- NAVBAR START -->
+    <nav class="navbar navbar-expand-lg bg-none navbar-dark position-fixed w-100 text-danger">
+        <div class="container-fluid">
+		<a class="navbar-brand text-success m-lg-5 fst-manrope" href="#">MelodyMeadow</a>   
+
+		  <audio id="background-music" loop>
+			<source src="../audio/audio.mp3" type="audio/mpeg">
+			Ваш браузер не поддерживает аудио элемент.
+		</audio>
+		<button id="btn-trans" class="button-transparent" onclick="playMusic()">🔉</button>
+		<button id="btn-trans" class="button-transparent" onclick="stopMusic()">🔇</button>
+	
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Category
+                </a>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuLink"> 
+					<a class="dropdown-item" href="../instruments/all.html">Все инструменты</a> 
+					<a class="dropdown-item" href="http://127.0.0.1:5505/ready-html/index.html">Гитара</a> 
+					<a class="dropdown-item" href="#">Скрипка</a> 
+					<a class="dropdown-item" href="#">Фортепиано</a> 
+					   <a class="dropdown-item" href="#">Барабаны</a> 
+					<a class="dropdown-item" href="#">Виолончель</a> 
+					<a class="dropdown-item" href="#">Категория 1</a> 
+					<a class="dropdown-item" href="#">Категория 2</a> 
+					<a class="dropdown-item" href="#">Категория 3</a> 
+				   </div> 
+				   <ul class="dropdown-menu scrollable-menu" role="menu"></ul> 
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" id="registerUser-modal" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" id="loginUser-modal" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Login</a>
+              </li>
+			  <li class="nav-item">
+				<a class="nav-link active" aria-current="page" href="#" id="registerAdmin-modal"
+					data-bs-toggle="modal" data-bs-target="#register-admin-modal">Add Admin</a>
+			</li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" id="logoutUser-btn">Logout</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" id="cartModal-btn" data-bs-toggle="modal" data-bs-target="#cartModal">Cart</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" id="showUsername">No user</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="inpSearch">
+              <button class="btn btn-outline-success" type="submit" id="search-btn">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+  <!-- NAVBAR END -->
+
+    <div class="title">
+        <h1>Все инструменты</h1>
+    </div>
+ <!-- pagination -->
+ <div class="pagin">
+    <div class="d-flex w-100 justify-content-center">
+      <a
+        class="btn btn-dark m-1"
+        href="#"
+        aria-label="Previous"
+        id="prev-page-btn"
+      >
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+      <a
+        class="btn btn-dark m-1"
+        href="#"
+        aria-label="Next"
+        id="next-page-btn"
+      >
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </div>
+  </div>
+<!-- CARDS START -->
+<div class="cards">
+<!-- guitar -->
+  <div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="https://i.pinimg.com/564x/34/d8/0a/34d80a5375e13fea9594aafbc6eeb2df.jpg" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Гитара</h5>
+          <p class="card-text">Белая электрогитара — это воплощение чистоты и элегантности в мире музыки. Как необъятный ледяной пейзаж или нежный лепесток розы, её сверкающий белоснежный корпус притягивает взгляд и вызывает восхищение. Каждая нота, извлеченная из этого инструмента, словно кристальный звон, переносящий слушателя в сферы возвышенных чувств.
+          </p>
+          <audio id="background-music" loop>
+            <source src="../audio/MotionGo Music - Trail (Original Mix).mp3" type="audio/mpeg">
+            Ваш браузер не поддерживает аудио элемент.
+        </audio>
+        <button class="button-transparent" onclick="playMusic('background-music')">🔉</button>
+        <button class="button-transparent" onclick="stopMusic('background-music')">🔇</button>
+          <button class="videoPlay">📹</button>
+          <button class="btnBuy">BUY</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- skripka -->
+  <div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="https://i.pinimg.com/564x/cf/d7/77/cfd7774deee1fa8fde5574c746492215.jpg" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Скрипка</h5>
+          <p class="card-text">Хрустальная скрипка — не просто музыкальный инструмент. Это драгоценное произведение искусства, символ вечной красоты музыки, которая, словно вода, проникает сквозь пространство и время, соединяя сердца людей.
+          </p>
+          <audio id="skripka-mus" loop>
+            <source src="../audio/classical-classical-850_nwm.mp3" type="audio/mpeg">
+            Ваш браузер не поддерживает аудио элемент.
+        </audio>
+        <button class="button-transparent" onclick="playMusic('skripka-mus')">🔉</button>
+        <button class="button-transparent" onclick="stopMusic('skripka-mus')">🔇</button>
+          <button class="videoPlay">📹</button>
+          <button class="btnBuy">BUY</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--arpha -->
+  <div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="https://i.pinimg.com/564x/16/37/13/163713cd15085684d78e9540c7f724dc.jpg" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Арфа</h5>
+          <p class="card-text">Арфа — это одно из самых волшебных и завораживающих музыкальных созданий человечества. Её изгибы напоминают о грации женской фигуры, а каждая струна хранит собственную историю мелодий, которые она готова рассказать.
+          </p>
+          <audio id="arfa" loop>
+            <source src="../audio/Patricia Spero - Fairy Melody (megapesni.fm).mp3">
+            Ваш браузер не поддерживает аудио элемент.
+        </audio>
+        <button class="button-transparent" onclick="playMusic('arfa')">🔉</button>
+        <button class="button-transparent" onclick="stopMusic('arfa')">🔇</button>
+          <button class="videoPlay">📹</button>
+          <button class="btnBuy">BUY</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- барбаны -->
+  <div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="https://i.pinimg.com/564x/1f/40/b3/1f40b30cdca0479e189c8c39f3927875.jpg" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Барабаны</h5>
+          <p class="card-text">Барабаны — это древний язык Земли, говорящий пульсацией вселенной. Каждый удар — это сердцебиение мира, вечное напоминание о ритме жизни, которое колышется в нас всех. С первых дней человечества барабаны сопровождали ритуалы и праздники, будучи мостом между небесами и землей, человеком и духами.
+          </p>
+          <audio id="baraban" loop>
+            <source src="../audio/baraban-z_uk.mp3">
+            Ваш браузер не поддерживает аудио элемент.
+        </audio>
+        <button class="button-transparent" onclick="playMusic('baraban')">🔉</button>
+        <button class="button-transparent" onclick="stopMusic('baraban')">🔇</button>
+          <button class="videoPlay">📹</button>
+          <button class="btnBuy">BUY</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- виолончеель -->
+  <div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="https://i.pinimg.com/564x/29/00/bb/2900bb5e7db378841d3e93be1503f47f.jpg" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Виолончель</h5>
+          <p class="card-text">Виолончель — это величественный инструмент, воплощение глубины и страсти в мире музыки. Её изысканные очертания и глубокий, насыщенный тембр проникают прямо в душу, словно тёплые объятия старого друга.
+          </p>
+          <audio id="vio" loop>
+            <source src="../audio/cdb297d118feab7.mp3">
+            Ваш браузер не поддерживает аудио элемент.
+        </audio>
+        <button class="button-transparent" onclick="playMusic('vio')">🔉</button>
+        <button class="button-transparent" onclick="stopMusic('vio')">🔇</button>
+          <button class="videoPlay">📹</button>
+          <button class="btnBuy">BUY</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- CARDS END -->
+
+
+    <!-- js bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="../instr js/all.js"></script>
+</body>
+</html>
